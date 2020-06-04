@@ -1,0 +1,17 @@
+2020-02-03 13:14:16,080 - root - INFO - inpu size :320
+priors nums:4420
+2020-02-03 13:14:16,300 - root - INFO - Namespace(balance_data=False, base_net=None, base_net_lr=None, batch_size=24, checkpoint_folder='./models/train-version-slim', cuda_index='0', dataset_type='voc', datasets=['./data/wider_face_add_lm_10_10'], debug_steps=100, extra_layers_lr=None, freeze_base_net=False, freeze_net=False, gamma=0.1, input_size=320, log_dir='./models/train-version-slim/logs', lr=0.01, milestones='95,150', momentum=0.9, net='slim', num_epochs=200, num_workers=4, optimizer_type='SGD', overlap_threshold=0.35, power=2, pretrained_ssd=None, resume=None, scheduler='multi-step', t_max=120, use_cuda=True, validation_dataset='./data/wider_face_add_lm_10_10', validation_epochs=5, weight_decay=0.0005)
+2020-02-03 13:14:16,303 - root - INFO - Prepare training datasets.
+2020-02-03 13:14:16,313 - root - INFO - No labels file, using default VOC classes.
+2020-02-03 13:14:16,314 - root - INFO - Stored labels into file ./models/train-version-slim\voc-model-labels.txt.
+2020-02-03 13:14:16,314 - root - INFO - Train dataset size: 12859
+2020-02-03 13:14:16,314 - root - INFO - Prepare Validation datasets.
+2020-02-03 13:14:16,318 - root - INFO - No labels file, using default VOC classes.
+2020-02-03 13:14:16,318 - root - INFO - validation dataset size: 3219
+2020-02-03 13:14:16,318 - root - INFO - Build network.
+Traceback (most recent call last):
+  File "train.py", line 283, in <module>
+    {'params': net.module.base_net.parameters(), 'lr': base_net_lr},
+  File "C:\jupyter_notebook\Project\ULF\torch\nn\modules\module.py", line 576, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'SSD' object has no attribute 'module'

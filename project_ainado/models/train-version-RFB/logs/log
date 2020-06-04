@@ -1,0 +1,12 @@
+2020-02-03 07:21:19,543 - root - INFO - inpu size :320
+priors nums:4420
+2020-02-03 07:21:19,824 - root - INFO - Namespace(balance_data=False, base_net=None, base_net_lr=None, batch_size=24, checkpoint_folder='./models/train-version-RFB', cuda_index='0', dataset_type='voc', datasets=['./data/wider_face_add_lm_10_10'], debug_steps=100, extra_layers_lr=None, freeze_base_net=False, freeze_net=False, gamma=0.1, input_size=320, log_dir='./models/train-version-RFB/logs', lr=0.01, milestones='95,150', momentum=0.9, net='RFB', num_epochs=200, num_workers=4, optimizer_type='SGD', overlap_threshold=0.35, power=2, pretrained_ssd=None, resume=None, scheduler='multi-step', t_max=120, use_cuda=True, validation_dataset='./data/wider_face_add_lm_10_10', validation_epochs=5, weight_decay=0.0005)
+2020-02-03 07:21:19,826 - root - INFO - Prepare training datasets.
+Traceback (most recent call last):
+  File "train.py", line 223, in <module>
+    target_transform=target_transform)
+  File "C:\jupyter_notebook\project\ulf\vision\datasets\voc_dataset.py", line 25, in __init__
+    self.ids = VOCDataset._read_image_ids(image_sets_file)
+  File "C:\jupyter_notebook\project\ulf\vision\datasets\voc_dataset.py", line 83, in _read_image_ids
+    with open(image_sets_file) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\wider_face_add_lm_10_10\\ImageSets\\Main\\trainval.txt'
