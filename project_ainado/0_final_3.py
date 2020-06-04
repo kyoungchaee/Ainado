@@ -280,7 +280,7 @@ def mouse_callback(event, x,y, flags, param):
     global test
     global op
 
-    if event == cv2.EVENT_LBUTTONDOWN: #마우스를 누른 상태
+    if event == cv2.EVENT_LBUTTONDOWN: #마우스를 누른 상태, left mouse button being clicked
         drawing = True
         x_pos_.append(x)
         y_pos_.append(y)
@@ -380,7 +380,7 @@ while True:
             face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
 
             result = my_model[s].predict(face)
-          #  print(result[0]) #닮은 사진.
+          #  print(result[0]) #닮은 사진, 
             print(result[1]) #유사도 낮을수록 유사한 것.
             if result[1] < 80:
 #                confidence_my = int(100*(1-(result[1])/300))
